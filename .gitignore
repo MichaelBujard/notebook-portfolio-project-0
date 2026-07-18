@@ -1,0 +1,8 @@
+.venv/
+.ipynb_checkpoints/
+__pycache__/
+.env
+
+# Private local collaboration context
+/AGENTS.md
+/.agents/
