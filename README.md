@@ -16,7 +16,7 @@ The analysis focuses on these questions:
 	- Use: `foodsecurity-state-2024.csv`
 	- Analysis: filter states + compare prevalence rates
 2. *How do selected states compare with the U.S. overall?*
-	- Use: `foodsecurity-state-2024.csv` and `foodsecurity-all-households-2024.csv`
+	- Use: `foodsecurity-state-2024.csv`
 	- Analysis: compare each selected state against `U.S. total`
 3. *How does food insecurity vary by education level in the U.S.?*
 	- Use: `foodsecurity-educ-emp-dis-2024.csv`
@@ -54,7 +54,6 @@ The main data source is the USDA ERS Food Security in the U.S. data download. Th
 Files used or expected to be used:
 
 - `foodsecurity-state-2024.csv`
-- `foodsecurity-all-households-2024.csv`
 - `foodsecurity-educ-emp-dis-2024.csv`
 - `foodsecurity-readme-2024.csv`
 
@@ -122,7 +121,7 @@ Python download link:
 7. Data Preparation
 	- Identify the rows needed for state, education, employment, and disability analysis
 8. EDA
-	- Compare selected states with the U.S. total.
+	- Compare selected states with the U.S. total using matching three-year estimates.
 	- Compare food insecurity by education level.
 	- Compare food insecurity by employment category.
 	- Compare food insecurity by disability status.
@@ -132,12 +131,13 @@ Python download link:
 
 ## Notes and Already-Known Limitations
 
-- USDA state estimates are reported as 3-year averages, not year-by-year
-- When comparing selected states with annual U.S. overall estimates, the analysis aligns each USDA state 3-year period with the U.S. annual row for the period end year.
-- Education and employment data may be national-level only, depending on the source and data collection method.
-- Because education and employment data may be analyzed nationally rather than within each selected state, this project compares state-level and socioeconomic patterns separately. It does not claim that education or employment explains differences between states unless the data directly supports that.
+- USDA state estimates are reported as 3-year averages, not year-by-year.
+- Adjacent three-year periods overlap by two years. So, estimates for a geography are not independent annual observations and should not be described as year-by-year changes.
+- Selected states are compared with the U.S. total using estimates from the same USDA three-year periods.
+- Education, employment, and disability data are national-level.
+- State estimates and national socioeconomic estimates are analyzed separately. Because the data do not show education, employment, or disability groups within individual states, this project does not use the national subgroup patterns to infer, explain, or quantify differences among states.
 - World Bank undernourishment data measures a different concept than USDA food insecurity and should only be used for perspective or broad context.
 
 ## Status
 
-Cleaning and Section 7.1 are complete. Creating tables for analysis.
+Cleaning and data preparation through Section 7 are complete. Ready to begin exploratory data analysis.
