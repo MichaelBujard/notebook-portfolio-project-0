@@ -51,14 +51,33 @@ The analysis addresses these questions:
 
 ## Analysis and Visualization Conventions
 
-- Organize each subsection as table, validation, visualization, and written interpretation.
+### Standard EDA Section Structure
+
+- Begin each numbered EDA section with its project question, source analysis table, and concise analytical purpose.
+- Immediately below the section introduction, define shared section-level configuration in a dedicated setup cell. This includes category orders, label mappings, and palettes used later in the section. Define each shared object once and reuse it; do not create a custom palette when color does not encode categories or series.
+- When both views are analytically useful, organize the section into a latest-period or latest-year subsection followed by a historical subsection.
+- Within each analytical subsection, use this order:
+  1. Create and display the presentation or derived table from an already validated analysis-ready DataFrame.
+  2. Validate the table before plotting or interpreting it.
+  3. Create and visually inspect the chart.
+  4. Add a Markdown interpretation grounded in the validated values and rendered chart.
+- After completing a numbered EDA section, review the section as a whole, restart the kernel, run the notebook top-to-bottom, inspect saved outputs and execution order, update this status file, and create a Git checkpoint.
+
+### Table and Validation Conventions
+
+- State the intended grain through the construction and validation: one row per relevant category and time period unless otherwise documented.
+- Validate proportionate properties such as shape, expected category and period coverage, presentation order, missing values, duplicates, and derived calculations.
+- Use explicit category-order lists for ordered tables and charts, and validate both category coverage and final presentation order.
+
+### Visualization and Interpretation Conventions
+
 - Use the shared seaborn `whitegrid` theme and colorblind palette defined at the beginning of Section 8.
+- Use a single consistent color for a one-series comparison. When color distinguishes categories or series, define a section-specific mapping near the top of that section and reuse it.
 - Use “Estimated” in chart titles for survey estimates.
-- Use full state names in presentation tables and charts.
-- Use the established `state_palette` whenever color distinguishes state series.
-- Use a consistent neutral treatment for the U.S. reference in Section 8.2.
 - Include units in axis labels and disclose relevant uncertainty or omitted uncertainty in chart notes.
-- Prefer broad descriptive patterns over causal claims or unsupported statements of statistical significance.
+- Use direct value labels only when they materially improve interpretation, such as signed differences around a reference; avoid redundant labels when a readable axis and nearby table already provide the values.
+- Use full state names in presentation tables and charts, the established `state_palette` for state series, and a consistent neutral treatment for the U.S. reference in Section 8.2.
+- Interpret exact latest-period values and broad historical patterns, but avoid causal claims or statements of statistical significance unless supported by the source data and an appropriate verified method.
 
 ## Completed Section 8.1
 
