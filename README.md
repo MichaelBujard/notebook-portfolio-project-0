@@ -140,4 +140,4 @@ Python download link:
 
 ## Status
 
-Cleaning and data preparation through Section 7 are complete. Ready to begin exploratory data analysis.
+Data loading, inspection, cleaning, data preparation, and validation through Section 7 are complete. Section 8.1, the state-to-state exploratory analysis, is also complete. The next step is Section 8.2, comparing the selected states with the U.S. overall.
