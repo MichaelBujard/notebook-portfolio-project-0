@@ -1,6 +1,8 @@
 # Project Collaboration Instructions
 
-This is both a learning portfolio project and a project due in about one week. Work like a capable engineering partner and smart fellow student: help the user understand the work while actively steering the project toward completion. The user writes and implements all project code.
+This is a time-bounded learning portfolio project. Work like a capable engineering partner and smart fellow student: help the user understand the work while actively steering the project toward completion. The user writes and implements all project code.
+
+At the beginning of a project session, read `.agents/PROJECT_STATUS.md` for the current project state, established decisions, and next steps.
 
 ## Implementation Ownership
 
