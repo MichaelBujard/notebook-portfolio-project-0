@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: August 9, 2026, at commit `66ba471` (`Complete Section 8.1 state-to-state comparison`).
+Last updated: August 9, 2026.
 
 This file contains working context for future project sessions. Update it after each completed analysis section or other major checkpoint. Public-facing project background remains in `README.md`, and collaboration rules remain in `AGENTS.md`.
 
@@ -9,7 +9,8 @@ This file contains working context for future project sessions. Update it after 
 - Sections 1–7 are complete: setup, data loading, inspection, cleaning, preparation, and validation.
 - Explicit data-type validation is implemented in Section 6.5 and passes for all cleaned DataFrames.
 - Section 8.1, State-to-State Comparison, is complete.
-- The next task is Section 8.2, State-to-U.S. Comparison.
+- Section 8.2, State-to-U.S. Comparison, is in progress. Section 8.2.1, Latest-Period Comparison, is complete.
+- The immediate next task is the historical visualization and interpretation in Section 8.2.2.
 - Sections 8.3–8.6, conclusions, and the final limitations section remain to be completed.
 
 ## Project Objective
@@ -28,6 +29,9 @@ The analysis addresses these questions:
 ## Prepared Analysis Tables
 
 - `state_us_analysis_df`: 102 rows; six geographies across 17 overlapping three-year periods. Expected grain: one row per geography per three-year period.
+- `us_reference_df`: 17 rows; one U.S. total observation per three-year period.
+- `state_vs_us_df`: 85 rows; five states across 17 periods with the matching U.S. estimate and the state-minus-U.S. point-estimate difference. Expected grain: one row per state per three-year period.
+- `latest_state_vs_us_df`: five rows; one selected-state comparison with the U.S. total for 2022–2024.
 - `educ_analysis_df`: 32 rows; four education categories across 2017–2024. Expected grain: one row per education category per year.
 - `emp_analysis_df`: 56 rows; seven employment categories across 2017–2024. Expected grain: one row per employment category per year.
 - `dis_analysis_df`: 32 rows; four disability categories across 2017–2024. Expected grain: one row per disability category per year.
@@ -74,26 +78,28 @@ Confirmed findings:
 
 These historical findings are descriptive because adjacent periods overlap and the historical chart omits margins of error for readability.
 
-## Next Steps: Section 8.2
+## Section 8.2 Progress
 
 Answer: *How do the selected states compare with the U.S. overall?*
 
-Recommended sequence:
+Completed work:
 
-1. Create a 17-row U.S. reference table from the `U.S. total` observations.
-2. Validate that the U.S. table contains exactly one observation per period.
-3. Merge the U.S. estimate onto the 85 selected-state observations using an explicit many-to-one merge.
-4. Derive each state’s difference from the U.S. estimate in percentage points.
-5. Validate the resulting 85-row table: five states, 17 periods per state, no missing U.S. matches, and no duplicate state-period pairs.
-6. Present the latest-period state-versus-U.S. comparison.
-7. Create a historical difference-from-U.S. chart with a neutral zero reference line and the established state colors.
-8. Interpret point-estimate differences cautiously. Use official USDA results before making claims about statistical significance.
-9. Add the Section 8.2 findings and limitations in Markdown.
-10. Restart the kernel, run the notebook top-to-bottom, review the rendered outputs, and create a checkpoint.
+- Created and validated a 17-row U.S. reference table with exactly one observation per period.
+- Merged the U.S. reference onto the 85 selected-state observations with an explicit many-to-one merge.
+- Derived and validated each state’s point-estimate difference from the U.S. total in percentage points.
+- Created and validated the five-row latest-period comparison table.
+- Created a horizontal diverging bar chart of the 2022–2024 point-estimate differences. The chart uses established state colors, a neutral zero reference, a symmetric scale, direct value labels, and a note explaining that uncertainty for the differences cannot be derived from the published margins of error alone.
+- Added the latest-period interpretation in Markdown.
+- Created and validated the 17-by-5 historical difference table for Section 8.2.2.
 
 Latest point-estimate differences from the U.S. are Louisiana +4.4, Texas +4.3, New York +0.7, California −0.8, and Iowa −2.5 percentage points.
 
-Before including significance claims, confirm them from the official USDA report. For 2022–2024, USDA reported Louisiana and Texas statistically above the U.S. average, Iowa statistically below it, and California and New York not statistically different from it for overall food insecurity.
+Immediate next steps:
+
+1. Create the Section 8.2.2 historical difference-from-U.S. chart with a neutral zero reference line and the established state colors.
+2. Interpret broad historical point-estimate patterns while accounting for the overlapping three-year periods.
+3. Do not include statistical-significance claims unless they are verified from an official USDA source.
+4. Restart the kernel, run the notebook top-to-bottom, review the rendered outputs, and complete the Section 8.2 checkpoint.
 
 ## Remaining Sequence
 
