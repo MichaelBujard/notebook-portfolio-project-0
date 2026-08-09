@@ -9,8 +9,9 @@ This file contains working context for future project sessions. Update it after 
 - Sections 1–7 are complete: setup, data loading, inspection, cleaning, preparation, and validation.
 - Explicit data-type validation is implemented in Section 6.5 and passes for all cleaned DataFrames.
 - Section 8.1, State-to-State Comparison, is complete.
-- Section 8.2, State-to-U.S. Comparison, is in progress. Section 8.2.1, Latest-Period Comparison, is complete.
-- The immediate next task is the historical visualization and interpretation in Section 8.2.2.
+- Section 8.2, State-to-U.S. Comparison, is complete.
+- The notebook has been restarted and run top-to-bottom after completing Section 8.2: all 118 code cells executed in order with no saved errors.
+- The immediate next task is Section 8.3, Education Comparison.
 - Sections 8.3–8.6, conclusions, and the final limitations section remain to be completed.
 
 ## Project Objective
@@ -78,7 +79,7 @@ Confirmed findings:
 
 These historical findings are descriptive because adjacent periods overlap and the historical chart omits margins of error for readability.
 
-## Section 8.2 Progress
+## Completed Section 8.2
 
 Answer: *How do the selected states compare with the U.S. overall?*
 
@@ -91,23 +92,35 @@ Completed work:
 - Created a horizontal diverging bar chart of the 2022–2024 point-estimate differences. The chart uses established state colors, a neutral zero reference, a symmetric scale, direct value labels, and a note explaining that uncertainty for the differences cannot be derived from the published margins of error alone.
 - Added the latest-period interpretation in Markdown.
 - Created and validated the 17-by-5 historical difference table for Section 8.2.2.
+- Created a five-state historical line chart of point-estimate differences from the U.S. covering 2006–2008 through 2022–2024. The chart uses the established state colors, a neutral zero reference, a symmetric scale, full three-year period labels, and a note addressing overlap, unavailable difference uncertainty, and statistical significance.
+- Added a cautious historical interpretation in Markdown.
+- Reviewed the complete section for structure, calculations, chart labeling, and analytical accuracy; no incorrect calculations or unsupported claims were identified.
+- Restarted the kernel and ran the notebook top-to-bottom. All 118 code cells have sequential execution counts from 1 through 118, with no saved error outputs.
 
 Latest point-estimate differences from the U.S. are Louisiana +4.4, Texas +4.3, New York +0.7, California −0.8, and Iowa −2.5 percentage points.
 
-Immediate next steps:
+Confirmed historical findings:
 
-1. Create the Section 8.2.2 historical difference-from-U.S. chart with a neutral zero reference line and the established state colors.
-2. Interpret broad historical point-estimate patterns while accounting for the overlapping three-year periods.
-3. Do not include statistical-significance claims unless they are verified from an official USDA source.
-4. Restart the kernel, run the notebook top-to-bottom, review the rendered outputs, and complete the Section 8.2 checkpoint.
+- Texas was above the U.S. point estimate in all 17 periods, while Iowa was below it in all 17 periods.
+- Louisiana was below the U.S. estimate in the first four periods and above it from 2010–2012 onward. Its largest difference was +5.3 percentage points in 2014–2016.
+- California was modestly above the U.S. estimate during several early periods and below it from 2012–2014 onward.
+- New York generally remained relatively close to the U.S. estimate and appeared on both sides of the U.S. reference.
+
+These are descriptive point-estimate patterns. Adjacent periods overlap by two years, and uncertainty for state-minus-U.S. differences cannot be derived from the published margins of error alone.
+
+## Immediate Next Steps
+
+1. Begin Section 8.3, Education Comparison, using the validated `educ_analysis_df` table.
+2. Confirm the intended education-category ordering and select the latest-year and historical views needed to answer the question.
+3. Preserve the established sequence of table, validation, visualization, and written interpretation.
+4. Keep national subgroup results analytically separate from the state comparisons in Sections 8.1 and 8.2.
 
 ## Remaining Sequence
 
-1. Section 8.2: State-to-U.S. comparison.
-2. Section 8.3: Education comparison.
-3. Section 8.4: Employment comparison.
-4. Section 8.5: Disability comparison.
-5. Section 8.6: World Bank context.
-6. Section 9: Conclusions.
-7. Section 10: Final limitations.
-8. Final notebook run, visual review, README refresh, and project cleanup.
+1. Section 8.3: Education comparison.
+2. Section 8.4: Employment comparison.
+3. Section 8.5: Disability comparison.
+4. Section 8.6: World Bank context.
+5. Section 9: Conclusions.
+6. Section 10: Final limitations.
+7. Final notebook run, visual review, README refresh, and project cleanup.
