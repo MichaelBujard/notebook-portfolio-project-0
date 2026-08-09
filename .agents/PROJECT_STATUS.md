@@ -10,8 +10,9 @@ This file contains working context for future project sessions. Update it after 
 - Explicit data-type validation is implemented in Section 6.5 and passes for all cleaned DataFrames.
 - Section 8.1, State-to-State Comparison, is complete.
 - Section 8.2, State-to-U.S. Comparison, is complete.
-- The notebook has been restarted and run top-to-bottom after completing Section 8.2: all 118 code cells executed in order with no saved errors.
-- The immediate next task is Section 8.3, Education Comparison.
+- Section 8.3, Education Comparison, is in progress. Section 8.3.1, Latest-Year Comparison, is complete.
+- The notebook has been restarted and run top-to-bottom after completing Section 8.3.1: all 121 code cells executed in order with no saved errors.
+- The immediate next task is the historical education comparison in Section 8.3.2.
 - Sections 8.3–8.6, conclusions, and the final limitations section remain to be completed.
 
 ## Project Objective
@@ -33,9 +34,9 @@ The analysis addresses these questions:
 - `us_reference_df`: 17 rows; one U.S. total observation per three-year period.
 - `state_vs_us_df`: 85 rows; five states across 17 periods with the matching U.S. estimate and the state-minus-U.S. point-estimate difference. Expected grain: one row per state per three-year period.
 - `latest_state_vs_us_df`: five rows; one selected-state comparison with the U.S. total for 2022–2024.
-- `educ_analysis_df`: 32 rows; four education categories across 2017–2024. Expected grain: one row per education category per year.
-- `emp_analysis_df`: 56 rows; seven employment categories across 2017–2024. Expected grain: one row per employment category per year.
-- `dis_analysis_df`: 32 rows; four disability categories across 2017–2024. Expected grain: one row per disability category per year.
+- `educ_analysis_df`: 32 rows and four columns; four education categories across 2017–2024. Expected grain: one row per education category per year.
+- `emp_analysis_df`: 56 rows and four columns; seven employment categories across 2017–2024. Expected grain: one row per employment category per year.
+- `dis_analysis_df`: 32 rows and four columns; four disability categories across 2017–2024. Expected grain: one row per disability category per year.
 - `wb_context_df`: 69 rows; the United States, Canada, and Mexico across 2001–2023. Expected grain: one row per country per year.
 
 ## Methodological Guardrails
@@ -43,6 +44,7 @@ The analysis addresses these questions:
 - USDA state estimates are three-year averages.
 - Adjacent state periods overlap by two years and are not independent annual observations. Do not describe their movement as independent year-to-year change.
 - USDA state margins of error are 90-percent confidence margins.
+- Overall food-insecurity prevalence is the primary outcome throughout the state, education, employment, and disability analyses. Very low food security is a more severe subset but is outside the current analytical scope.
 - State estimates and national education, employment, and disability estimates must remain analytically separate. National subgroup patterns cannot explain or quantify state differences.
 - USDA household food insecurity and World Bank undernourishment are related but distinct concepts. World Bank results provide context rather than validation of USDA results.
 - Validate table grain, category coverage, missing values, duplicates, and relevant data types before interpreting or plotting a derived table.
@@ -108,12 +110,33 @@ Confirmed historical findings:
 
 These are descriptive point-estimate patterns. Adjacent periods overlap by two years, and uncertainty for state-minus-U.S. differences cannot be derived from the published margins of error alone.
 
+## Section 8.3 Progress
+
+Answer: *How does food insecurity vary by education level in the U.S.?*
+
+Completed work:
+
+- Narrowed `educ_analysis_df`, `emp_analysis_df`, and `dis_analysis_df` to four analysis-ready columns by removing the out-of-scope `very_low_food_security_percent` field. The cleaned source data still preserve that measure.
+- Updated and reran the Section 7 validations. The three subgroup tables retain their expected row counts, category coverage, grain, and absence of missing values or duplicate year-category pairs.
+- Documented in the README, with official USDA ERS citations, that very low food security is the more severe subset of food insecurity and that this project consistently focuses on overall food-insecurity prevalence.
+- Defined and validated the ordered 2024 education comparison table with four categories and one row per category.
+- Created a horizontal bar chart of estimated 2024 food-insecurity prevalence by education level, using a consistent single-color treatment, percentage units, and a note that the source file does not provide margins of error for these subgroup estimates.
+- Added and reviewed a cautious latest-year interpretation that describes association rather than causation and does not assess statistical significance.
+- Restarted the kernel and ran the notebook top-to-bottom. All 121 code cells have sequential execution counts from 1 through 121, with no saved error outputs.
+
+Confirmed 2024 findings:
+
+- Estimated food-insecurity prevalence was 30.4 percent for less than high school, 21.7 percent for high school, 18.3 percent for some college, and 6.1 percent for college or more.
+- The college-or-more estimate was 24.3 percentage points below the less-than-high-school estimate.
+- The ordered pattern is descriptive and does not establish that educational attainment caused the differences.
+- Statistical significance is not assessed because the source file does not provide margins of error for these subgroup estimates.
+
 ## Immediate Next Steps
 
-1. Begin Section 8.3, Education Comparison, using the validated `educ_analysis_df` table.
-2. Confirm the intended education-category ordering and select the latest-year and historical views needed to answer the question.
-3. Preserve the established sequence of table, validation, visualization, and written interpretation.
-4. Keep national subgroup results analytically separate from the state comparisons in Sections 8.1 and 8.2.
+1. Create and validate the Section 8.3.2 historical education table covering 2017–2024.
+2. Create a historical education chart using the established category order and a readable, consistent color treatment.
+3. Interpret broad patterns without causal claims or unsupported statements of statistical significance.
+4. Restart the kernel, run the notebook top-to-bottom, review the complete Section 8.3, and create the Section 8.3 checkpoint.
 
 ## Remaining Sequence
 
