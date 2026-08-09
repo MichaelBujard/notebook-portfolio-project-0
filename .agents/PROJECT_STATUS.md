@@ -10,9 +10,9 @@ This file contains working context for future project sessions. Update it after 
 - Explicit data-type validation is implemented in Section 6.5 and passes for all cleaned DataFrames.
 - Section 8.1, State-to-State Comparison, is complete.
 - Section 8.2, State-to-U.S. Comparison, is complete.
-- Section 8.3, Education Comparison, is in progress. Section 8.3.1, Latest-Year Comparison, is complete.
-- The notebook has been restarted and run top-to-bottom after completing Section 8.3.1: all 121 code cells executed in order with no saved errors.
-- The immediate next task is the historical education comparison in Section 8.3.2.
+- Section 8.3, Education Comparison, is complete.
+- The notebook has been restarted and run top-to-bottom after completing Section 8.3: all 125 code cells executed in order with no saved errors.
+- The immediate next task is Section 8.4, Employment Comparison.
 - Sections 8.3–8.6, conclusions, and the final limitations section remain to be completed.
 
 ## Project Objective
@@ -110,7 +110,7 @@ Confirmed historical findings:
 
 These are descriptive point-estimate patterns. Adjacent periods overlap by two years, and uncertainty for state-minus-U.S. differences cannot be derived from the published margins of error alone.
 
-## Section 8.3 Progress
+## Completed Section 8.3
 
 Answer: *How does food insecurity vary by education level in the U.S.?*
 
@@ -122,7 +122,11 @@ Completed work:
 - Defined and validated the ordered 2024 education comparison table with four categories and one row per category.
 - Created a horizontal bar chart of estimated 2024 food-insecurity prevalence by education level, using a consistent single-color treatment, percentage units, and a note that the source file does not provide margins of error for these subgroup estimates.
 - Added and reviewed a cautious latest-year interpretation that describes association rather than causation and does not assess statistical significance.
-- Restarted the kernel and ran the notebook top-to-bottom. All 121 code cells have sequential execution counts from 1 through 121, with no saved error outputs.
+- Created and validated an 8-by-4 historical education table covering 2017–2024, with years and education categories in the intended presentation order.
+- Created a four-series historical line chart with a zero baseline, annual year labels, the established education order, and a note addressing unavailable margins of error.
+- Added and reviewed a historical interpretation describing the persistent ordering and broad movement of the point estimates without causal or statistical-significance claims.
+- Reviewed the complete section for structure, calculations, chart labeling, and analytical accuracy; no incorrect calculations or unsupported claims were identified.
+- Restarted the kernel and ran the notebook top-to-bottom. All 125 code cells have sequential execution counts from 1 through 125, with no saved error outputs.
 
 Confirmed 2024 findings:
 
@@ -131,19 +135,26 @@ Confirmed 2024 findings:
 - The ordered pattern is descriptive and does not establish that educational attainment caused the differences.
 - Statistical significance is not assessed because the source file does not provide margins of error for these subgroup estimates.
 
+Confirmed historical findings:
+
+- The less-than-high-school category had the highest point estimate in every year from 2017 through 2024, while college or more had the lowest.
+- The high-school estimate remained above the some-college estimate in every year.
+- Estimates were relatively stable or generally declined from 2017 through 2021, and all four categories had higher point estimates in 2022 than in 2021.
+- From 2022 through 2024, the less-than-high-school estimate remained near 30 percent, the high-school and some-college estimates increased to 21.7 and 18.3 percent, and the college-or-more estimate ended at 6.1 percent.
+- These patterns are descriptive because margins of error are unavailable and statistical significance is not assessed.
+
 ## Immediate Next Steps
 
-1. Create and validate the Section 8.3.2 historical education table covering 2017–2024.
-2. Create a historical education chart using the established category order and a readable, consistent color treatment.
-3. Interpret broad patterns without causal claims or unsupported statements of statistical significance.
-4. Restart the kernel, run the notebook top-to-bottom, review the complete Section 8.3, and create the Section 8.3 checkpoint.
+1. Begin Section 8.4, Employment Comparison, using the validated `emp_analysis_df` table.
+2. Confirm the intended employment-category ordering and select the latest-year and historical views needed to answer the question.
+3. Preserve the established sequence of table, validation, visualization, and written interpretation.
+4. Keep national employment patterns analytically separate from the state comparisons in Sections 8.1 and 8.2.
 
 ## Remaining Sequence
 
-1. Section 8.3: Education comparison.
-2. Section 8.4: Employment comparison.
-3. Section 8.5: Disability comparison.
-4. Section 8.6: World Bank context.
-5. Section 9: Conclusions.
-6. Section 10: Final limitations.
-7. Final notebook run, visual review, README refresh, and project cleanup.
+1. Section 8.4: Employment comparison.
+2. Section 8.5: Disability comparison.
+3. Section 8.6: World Bank context.
+4. Section 9: Conclusions.
+5. Section 10: Final limitations.
+6. Final notebook run, visual review, README refresh, and project cleanup.
