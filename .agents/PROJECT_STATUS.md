@@ -11,9 +11,10 @@ This file contains working context for future project sessions. Update it after 
 - Section 8.1, State-to-State Comparison, is complete.
 - Section 8.2, State-to-U.S. Comparison, is complete.
 - Section 8.3, Education Comparison, is complete.
-- The notebook has been restarted and run top-to-bottom after completing Section 8.3: all 125 code cells executed in order with no saved errors.
-- The immediate next task is Section 8.4, Employment Comparison.
-- Sections 8.3–8.6, conclusions, and the final limitations section remain to be completed.
+- Section 8.4, Employment Comparison, is complete.
+- The notebook has been restarted and run top-to-bottom after completing Section 8.4: all 132 code cells executed in order with no saved errors.
+- The immediate next task is Section 8.5, Disability Comparison.
+- Sections 8.5–8.6, conclusions, and the final limitations section remain to be completed.
 
 ## Project Objective
 
@@ -51,8 +52,9 @@ The analysis addresses these questions:
 
 ## Analysis and Visualization Conventions
 
-### Standard EDA Section Structure
+### General Section 8 EDA Workflow
 
+- Use the following as a general workflow across Section 8 rather than as a rigid template derived from any particular completed section. Apply it to sections and subsections when it supports the analysis, with reasonable flexibility for each question, dataset, validation need, and visualization.
 - Begin each numbered EDA section with its project question, source analysis table, and concise analytical purpose.
 - Immediately below the section introduction, define shared section-level configuration in a dedicated setup cell. This includes category orders, label mappings, and palettes used later in the section. Define each shared object once and reuse it; do not create a custom palette when color does not encode categories or series.
 - When both views are analytically useful, organize the section into a latest-period or latest-year subsection followed by a historical subsection.
@@ -162,18 +164,35 @@ Confirmed historical findings:
 - From 2022 through 2024, the less-than-high-school estimate remained near 30 percent, the high-school and some-college estimates increased to 21.7 and 18.3 percent, and the college-or-more estimate ended at 6.1 percent.
 - These patterns are descriptive because margins of error are unavailable and statistical significance is not assessed.
 
+## Completed Section 8.4
+
+Answer: *How does food insecurity vary by employment group in the U.S.?*
+
+Completed work:
+
+- Defined a shared employment-category order and palette, then created and validated the ordered seven-row 2024 table and 8-by-7 historical table.
+- Created a single-color latest-year bar chart and seven-series historical line chart, with cautious interpretations and notes addressing unavailable margins of error.
+- Reviewed the complete section; no calculation, validation, visualization, or interpretation issues were identified.
+- Restarted the kernel and ran the notebook top-to-bottom. All 132 code cells have sequential execution counts from 1 through 132, with no saved error outputs.
+
+Confirmed findings:
+
+- In 2024, Unemployed, Disabled, and Part-time economic reasons had the three highest point estimates; Full-time and Retired had the two lowest.
+- Those same broad high and low groupings persisted across 2017–2024, although the ordering among the three highest categories changed; Retired had the lowest point estimate every year.
+- The point estimates for Part-time non-economic reasons, Full-time, and Retired were higher in every year from 2022 through 2024 than in any year from 2017 through 2021.
+- Results are descriptive associations; margins of error are unavailable, statistical significance is not assessed, and no causal claims are made.
+
 ## Immediate Next Steps
 
-1. Begin Section 8.4, Employment Comparison, using the validated `emp_analysis_df` table.
-2. Confirm the intended employment-category ordering and select the latest-year and historical views needed to answer the question.
-3. Preserve the established sequence of table, validation, visualization, and written interpretation.
-4. Keep national employment patterns analytically separate from the state comparisons in Sections 8.1 and 8.2.
+1. Begin Section 8.5, Disability Comparison, using the validated `dis_analysis_df` table.
+2. Inspect the disability categories and values before choosing a presentation order and deciding whether latest-year and historical views are both analytically useful.
+3. Follow the general Section 8 workflow with reasonable adaptations for the disability analysis.
+4. Keep national disability patterns analytically separate from the state comparisons in Sections 8.1 and 8.2.
 
 ## Remaining Sequence
 
-1. Section 8.4: Employment comparison.
-2. Section 8.5: Disability comparison.
-3. Section 8.6: World Bank context.
-4. Section 9: Conclusions.
-5. Section 10: Final limitations.
-6. Final notebook run, visual review, README refresh, and project cleanup.
+1. Section 8.5: Disability comparison.
+2. Section 8.6: World Bank context.
+3. Section 9: Conclusions.
+4. Section 10: Final limitations.
+5. Final notebook run, visual review, README refresh, and project cleanup.
