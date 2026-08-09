@@ -35,6 +35,8 @@ The analysis focuses on these questions:
 
 Focuses on household food insecurity among the general U.S. population, zooming in on certain states.
 
+USDA defines food-insecure households as including households with low food security and very low food security ([USDA ERS, Key Statistics and Graphics](https://www.ers.usda.gov/topics/food-nutrition-assistance/food-security-in-the-us/key-statistics-graphics)). USDA identifies very low food security as the more severe range of food insecurity ([USDA ERS, Measurement](https://www.ers.usda.gov/topics/food-nutrition-assistance/food-security-in-the-us/measurement)). This project focuses on overall food-insecurity prevalence to remain aligned with its research questions and apply a consistent outcome across the state, education, employment, and disability analyses.
+
 The selected states for closer comparison are:
 
 - California
