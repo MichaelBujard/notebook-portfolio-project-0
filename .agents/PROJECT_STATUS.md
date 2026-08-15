@@ -13,9 +13,10 @@ This file contains working context for future project sessions. Update it after 
 - Section 8.3, Education Comparison, is complete.
 - Section 8.4, Employment Comparison, is complete.
 - Section 8.5, Disability Comparison, is complete.
-- The notebook has been restarted and run top-to-bottom after completing Section 8.5: all 139 code cells executed in order with no saved errors.
-- The immediate next task is Section 8.6, World Bank Context.
-- Section 8.6, conclusions, and the final limitations section remain to be completed.
+- Section 8.6, World Bank Context, is complete.
+- The notebook has been restarted and run top-to-bottom after completing Section 8.6: all 147 code cells executed sequentially with no saved errors.
+- The immediate next task is Section 9, Conclusions.
+- Conclusions and the final limitations section remain to be completed.
 
 ## Project Objective
 
@@ -200,16 +201,37 @@ Confirmed findings:
 - All four categories had 2024 point estimates above their respective 2017–2021 ranges.
 - Results are descriptive associations; margins of error are unavailable, statistical significance is not assessed, and no causal claims are made.
 
+## Completed Section 8.6
+
+Answer: *How does the U.S. compare with Canada and Mexico on undernourishment, and what World Bank metadata can be used to interpret that comparison?*
+
+Completed work:
+
+- Created and validated a 23-by-3 historical undernourishment table covering the United States, Canada, and Mexico from 2001 through 2023.
+- Confirmed as a separate analytical observation that the United States and Canada have identical displayed values of 2.5 throughout the dataset; this is not treated as proof of identical underlying prevalence.
+- Created a one-row, three-column small-multiples chart with shared axes, a zero baseline, country-specific colors, selected year ticks, and separate panels that prevent the U.S. and Canadian series from concealing one another.
+- Added a chart note and interpretation explaining that values displayed as 2.5 may signify prevalence below 2.5 percent and that undernourishment is distinct from USDA household food insecurity.
+- Displayed the full World Bank indicator definition, FAO source organization, and source note from the downloaded indicator metadata.
+- Created and validated a three-row country metadata table showing country code, region, and income group for the United States, Canada, and Mexico.
+- Documented that FAO uses a common estimation framework but may draw on different input sources and indirect procedures when suitable country-year data are unavailable; the project does not determine whether country-specific input differences affect the comparison.
+- Reviewed the complete section and restarted the kernel. All 147 code cells executed sequentially with no saved errors.
+
+Confirmed findings:
+
+- The United States and Canada are displayed as 2.5 percent in every year from 2001 through 2023, but the World Bank reporting threshold means these values are not necessarily exact and do not establish identical underlying prevalence.
+- Mexico's reported prevalence was 2.8 percent in 2001, reached 4.1 percent in 2004 and 2009, remained at 3.7 percent from 2013 through 2017, and declined from 3.6 percent in 2018 to 2.7 percent in 2023.
+- The United States and Canada are classified as North American, high-income economies; Mexico is classified as a Latin American and Caribbean, upper-middle-income economy. These classifications provide context but do not explain the observed pattern.
+- The results provide limited international context and do not validate the USDA household food-insecurity findings.
+
 ## Immediate Next Steps
 
-1. Begin Section 8.6, World Bank Context, using the validated `wb_context_df` table.
-2. Inspect the country series and available metadata before selecting the comparison tables, validation checks, and visualizations.
-3. Keep World Bank undernourishment analytically distinct from USDA household food insecurity; use it as international context rather than validation of the USDA results.
-4. Follow the general Section 8 workflow with reasonable adaptations for the World Bank data and metadata questions.
+1. Review the notebook and status-file diffs for the Section 8.6 checkpoint.
+2. Commit and push the completed Section 8.6 work.
+3. Begin Section 9, Conclusions, synthesizing the established findings without introducing new analysis or causal claims. This is portfolio project in which I'm learning how to do such a project, so conclusions can include what I learned from the process of extracting, transforming, loading, and visualizing the data.
+4. Complete Section 10, Final Limitations, consolidating the methodological constraints already documented throughout the notebook.
 
 ## Remaining Sequence
 
-1. Section 8.6: World Bank context.
-2. Section 9: Conclusions.
-3. Section 10: Final limitations.
-4. Final notebook run, visual review, README refresh, and project cleanup.
+1. Section 9: Conclusions.
+2. Section 10: Final limitations.
+3. Final notebook run, visual review, README refresh, and project cleanup.
