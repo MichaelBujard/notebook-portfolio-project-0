@@ -14,9 +14,11 @@ This file contains working context for future project sessions. Update it after 
 - Section 8.4, Employment Comparison, is complete.
 - Section 8.5, Disability Comparison, is complete.
 - Section 8.6, World Bank Context, is complete.
-- The notebook has been restarted and run top-to-bottom after completing Section 8.6: all 147 code cells executed sequentially with no saved errors.
-- The immediate next task is Section 9, Conclusions.
-- Conclusions and the final limitations section remain to be completed.
+- Section 9, Conclusions, is complete.
+- Section 10, Limitations, is complete.
+- The notebook has been restarted and run top-to-bottom after completing Sections 9–10 and final notebook cleanup: all 146 code cells executed sequentially with no saved errors.
+- The final notebook review and README refresh are complete.
+- The immediate next task is final repository cleanup, Git review, and the final project checkpoint.
 
 ## Project Objective
 
@@ -223,15 +225,28 @@ Confirmed findings:
 - The United States and Canada are classified as North American, high-income economies; Mexico is classified as a Latin American and Caribbean, upper-middle-income economy. These classifications provide context but do not explain the observed pattern.
 - The results provide limited international context and do not validate the USDA household food-insecurity findings.
 
+## Completed Section 9
+
+- Synthesized the established state, state-to-U.S., education, employment, disability, and World Bank findings without introducing new analysis.
+- Highlighted the largest observed differences and persistent historical patterns while preserving the distinction between descriptive association and causation.
+- Kept the World Bank results proportionate as limited international context and retained the reporting caveat for values displayed as 2.5 percent.
+- Concluded that the project identifies descriptive disparities associated with geography, education, employment, and disability status and provides a foundation for more detailed research.
+
+## Completed Section 10
+
+- Consolidated the project's major limitations concerning selected-state scope, overlapping three-year state periods, uncertainty, national subgroup interpretation, causal inference, and unmeasured related factors.
+- Documented that the national education, employment, and disability tables cannot explain state differences or show how the characteristics interact within the same households.
+- Reiterated that World Bank undernourishment and USDA household food insecurity are distinct measures that cannot be directly compared or used to validate one another.
+- Included the World Bank 2.5-percent reporting limitation, unavailable uncertainty intervals, and the unexamined comparability of country-specific FAO inputs.
+- Closed with a proportionate statement of what the transparent, reproducible descriptive analysis supports despite those limitations.
+- Removed the final empty code cell and a duplicated inspection cell, then confirmed that all 146 remaining code cells have sequential execution counts with no saved errors.
+
 ## Immediate Next Steps
 
-1. Review the notebook and status-file diffs for the Section 8.6 checkpoint.
-2. Commit and push the completed Section 8.6 work.
-3. Begin Section 9, Conclusions, synthesizing the established findings without introducing new analysis or causal claims. This is portfolio project in which I'm learning how to do such a project, so conclusions can include what I learned from the process of extracting, transforming, loading, and visualizing the data.
-4. Complete Section 10, Final Limitations, consolidating the methodological constraints already documented throughout the notebook.
+1. Perform final repository cleanup and review the complete Git diff.
+2. Create and push the final project checkpoint.
 
 ## Remaining Sequence
 
-1. Section 9: Conclusions.
-2. Section 10: Final limitations.
-3. Final notebook run, visual review, README refresh, and project cleanup.
+1. Final repository cleanup and Git review.
+2. Final commit and push.
