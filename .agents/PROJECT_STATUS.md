@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: August 9, 2026.
+Last updated: August 15, 2026.
 
 This file contains working context for future project sessions. Update it after each completed analysis section or other major checkpoint. Public-facing project background remains in `README.md`, and collaboration rules remain in `AGENTS.md`.
 
@@ -12,9 +12,10 @@ This file contains working context for future project sessions. Update it after 
 - Section 8.2, State-to-U.S. Comparison, is complete.
 - Section 8.3, Education Comparison, is complete.
 - Section 8.4, Employment Comparison, is complete.
-- The notebook has been restarted and run top-to-bottom after completing Section 8.4: all 132 code cells executed in order with no saved errors.
-- The immediate next task is Section 8.5, Disability Comparison.
-- Sections 8.5–8.6, conclusions, and the final limitations section remain to be completed.
+- Section 8.5, Disability Comparison, is complete.
+- The notebook has been restarted and run top-to-bottom after completing Section 8.5: all 139 code cells executed in order with no saved errors.
+- The immediate next task is Section 8.6, World Bank Context.
+- Section 8.6, conclusions, and the final limitations section remain to be completed.
 
 ## Project Objective
 
@@ -182,17 +183,33 @@ Confirmed findings:
 - The point estimates for Part-time non-economic reasons, Full-time, and Retired were higher in every year from 2022 through 2024 than in any year from 2017 through 2021.
 - Results are descriptive associations; margins of error are unavailable, statistical significance is not assessed, and no causal claims are made.
 
+## Completed Section 8.5
+
+Answer: *How does food insecurity vary by disability status in the U.S.?*
+
+Completed work:
+
+- Defined a shared disability-category order and palette, then created and validated the ordered four-row 2024 table and 8-by-4 historical table.
+- Created a single-color latest-year bar chart and four-series historical line chart, with cautious interpretations and notes addressing unavailable margins of error.
+- Reviewed the complete section and restarted the kernel. All 139 code cells executed sequentially with no saved errors.
+
+Confirmed findings:
+
+- In 2024, Not in labor force due to disability and Other disability among adults 18-64 had the two highest point estimates; Other disability among adults 65+ and No adult with disabilities had substantially lower estimates.
+- Those broad high and low groupings persisted across 2017–2024. The two lower series remained close and changed order several times.
+- All four categories had 2024 point estimates above their respective 2017–2021 ranges.
+- Results are descriptive associations; margins of error are unavailable, statistical significance is not assessed, and no causal claims are made.
+
 ## Immediate Next Steps
 
-1. Begin Section 8.5, Disability Comparison, using the validated `dis_analysis_df` table.
-2. Inspect the disability categories and values before choosing a presentation order and deciding whether latest-year and historical views are both analytically useful.
-3. Follow the general Section 8 workflow with reasonable adaptations for the disability analysis.
-4. Keep national disability patterns analytically separate from the state comparisons in Sections 8.1 and 8.2.
+1. Begin Section 8.6, World Bank Context, using the validated `wb_context_df` table.
+2. Inspect the country series and available metadata before selecting the comparison tables, validation checks, and visualizations.
+3. Keep World Bank undernourishment analytically distinct from USDA household food insecurity; use it as international context rather than validation of the USDA results.
+4. Follow the general Section 8 workflow with reasonable adaptations for the World Bank data and metadata questions.
 
 ## Remaining Sequence
 
-1. Section 8.5: Disability comparison.
-2. Section 8.6: World Bank context.
-3. Section 9: Conclusions.
-4. Section 10: Final limitations.
-5. Final notebook run, visual review, README refresh, and project cleanup.
+1. Section 8.6: World Bank context.
+2. Section 9: Conclusions.
+3. Section 10: Final limitations.
+4. Final notebook run, visual review, README refresh, and project cleanup.
